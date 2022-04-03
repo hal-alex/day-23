@@ -10,6 +10,7 @@
 
 import time
 from turtle import Screen
+
 from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
@@ -23,15 +24,14 @@ carmanager = CarManager()
 player = Player()
 screen.onkeypress(player.move_up, "Up")
 
-
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
 
     carmanager.create_a_car()
-    carmanager.move_single_car()
-    if player.ycor() == 280:
+    carmanager.move_all_cars()
 
+    if player.ycor() == 280:
         player.turtle_reset()
 
