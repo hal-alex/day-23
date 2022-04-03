@@ -14,6 +14,6 @@ class CarManager(Turtle):
         car = Car()
         self.all_cars_list.append(car)
 
-    def move_single_car(self):
+    def move_all_cars(self):
         for car in self.all_cars_list:
             car.backward(STARTING_MOVE_DISTANCE)

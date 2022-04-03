@@ -30,7 +30,7 @@ while game_is_on:
     screen.update()
 
     carmanager.create_a_car()
-    # carmanager.move_single_car()
+    carmanager.move_all_cars()
 
     if player.ycor() == 280:
         player.turtle_reset()
